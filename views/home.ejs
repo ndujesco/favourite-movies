@@ -1,0 +1,62 @@
+<%- include('./includes/head.ejs'); %>
+    <title>Home</title>
+    </head>
+    <style>
+        @media (max-width: 768px){
+            .add-margin {
+                margin-top: 7vh;
+            }
+        }
+    </style>
+
+    <body >
+        <%- include('./crud/nav.ejs'); %>
+
+        <div class="container add-margin">
+            <h1 class="heading">
+              All time favourite movies
+            </h1>
+            <p style="font-size: 1rem;" class="description"></p>
+      
+      
+              <div class="card">
+                <div class="front" style="background-image: url('https://d2eib6r9tuf5y8.cloudfront.net/l/assets/img/article/article-1708-joswvwm6/keyvisual.jpg');">
+                  <p class="large">
+                    
+                  </p>
+                </div>
+                <div class="back">
+                  <div>
+      
+                    <div class="title">
+                       <span class="release_date">
+                          
+                        </span>
+                    </div>
+                    <div class="rating">
+                      <label>
+                       
+                      </label>
+                      <i class="fas fa-star strr"></i>
+                    </div>
+                    <p>
+                    </p>
+                    <p style="font-size: 1rem;" class="overview">
+                        Get movie recommendations by viewing all time favourite movies of users. Do well to make your own list!
+                    </p>
+                    <input type="hidden" name="movieId" value="">
+      
+                  </div>
+                </div>
+              </div>
+
+      
+          </div>
+          <div style="padding-bottom: 1rem;" class="container text-center add">
+            <a href="/my-movies" class="button">My list</a>
+            <a href="/random-user" class="button" type="btn">Random List</a>
+          </div>
+      
+
+
+            <%- include('./includes/end.ejs'); %>

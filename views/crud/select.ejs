@@ -1,0 +1,30 @@
+<%- include('../includes/head.ejs'); %>
+
+  <title>Select Movies</title>
+  </head>
+
+  <body>
+
+    <%- include('./nav.ejs'); %>
+
+      <% if (movies && movies.length> 0) { %>
+        <div class="container">
+          <h1 class="heading">Select Movie</h1>
+          <% if (errorMessage) { %>
+            <p style="font-size: 1rem; color: rgb(238, 65, 65);">
+              <%= errorMessage %>
+            </p>
+            <% } %>
+              <% movies.forEach ( (movie)=> { %>
+                <p><a href="/save-movie?id=<%= movie.id %>">
+                    <%= movie.title %> - <%= movie.release_date %>
+                  </a></p>
+                <% }) %>
+        </div>
+        <% } else { %>
+          <h1 style="margin-left: 1rem;">No results</h1>
+          <% } %>
+
+
+
+            <%- include('../includes/end.ejs'); %>

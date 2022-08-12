@@ -1,0 +1,22 @@
+<nav class="navbar" >
+    <div class="navbar-container container">
+        <input type="checkbox" name="" id="Checkbox"/>
+        <div class="hamburger-lines">
+            <span class="line line1"></span>
+            <span class="line line2"></span>
+            <span class="line line3"></span>
+        </div>
+        <ul class="menu-items">
+            <li><a href="/" >HOME</a></li>
+            <% if (isAuthenticated) { %>
+                <form action="/auth/logout" method="post" id="logout">
+                    <li><a type="button" href="#" onclick="logout()">LOGOUT</a></li>
+                </form>
+            <% } else { %>
+                <li><a href="/auth/login" >LOGIN</a></li>
+                <li><a href="/auth/signup" >SIGNUP</a></li>
+            <% } %>
+        </ul>
+        <!-- <h1 class="logo"><a href="#home">ndujekwu</a></h1> -->
+    </div>
+</nav>

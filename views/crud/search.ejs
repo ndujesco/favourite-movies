@@ -1,0 +1,35 @@
+<%- include('../includes/head.ejs'); %>
+
+<title>Add Movie</title>
+</head>
+<body>
+  <%- include('./nav.ejs'); %>
+
+
+  <div class="content">
+    <h1 class="heading">Add a Movie</h1>
+
+    <form action="/search-movie" method="post" class="form" role="form" novalidate>
+      
+      <% if (errorMessage) { %>
+        <p style="font-size: 1rem; color: rgb(238, 65, 65);" class="h3 mb-3 fw-normal">
+          <%= errorMessage %>
+        </p>
+        <% } %>
+
+
+      <div class="form-group  required">
+        <label class="control-label" for="title">Movie Title</label>
+        <input class="form-control" id="title" name="title" type="text"> 
+      </div>
+      <input class="btn btn-default" id="submit" name="submit" type="submit" value="Add Movie">
+    </form>
+
+  </div>
+
+<%- include('../includes/end.ejs'); %>
+
+
+
+
+
