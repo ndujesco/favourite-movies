@@ -41,7 +41,7 @@
                   <%= movie.description%>
                 </p>
 
-                <% if (user==="me" ) { %>
+                <% if (user==="me") { %>
                   <input type="hidden" name="movieId" value="<%= movie.movieId %>">
                   <a href="/edit?movieId=<%= movie.movieId %>" class="button">Update</a>
                   <a class="button delete-button" onclick="askDelete(this)" type="btn">Delete</a>
