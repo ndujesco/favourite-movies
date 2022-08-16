@@ -2,9 +2,8 @@ html,
 body {
   height: 100%;
   background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
-  background-color: #ecedeb ;
-  font-family: 'Finlandica', sans-serif;
-
+  background-color: #ecedeb;
+  font-family: "Finlandica", sans-serif;
 }
 
 body {
@@ -24,7 +23,8 @@ body {
   z-index: 2;
 }
 
-.password, .name{
+.password,
+.name {
   margin-bottom: -1px;
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
@@ -36,7 +36,8 @@ body {
   border-top-right-radius: 0;
 }
 
-.btn, .btn:hover {
+.btn,
+.btn:hover {
   color: #fff;
   background-color: #6da2af;
 }
@@ -46,7 +47,7 @@ form a {
 }
 
 form p {
-  margin-top: .3rem;
+  margin-top: 0.3rem;
 }
 
 .register-log {
@@ -58,16 +59,14 @@ form p {
   line-height: 100px;
   margin-bottom: 20px;
 }
- 
+
 .register-log h1 {
   display: inline-block;
   vertical-align: middle;
   margin: 0 !important;
   font-size: 2rem;
-
 }
 
 input.invalid {
   border-color: red;
 }
-

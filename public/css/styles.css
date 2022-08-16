@@ -176,7 +176,7 @@ p.overview {
   border-radius: 100px;
   left: 10px;
   top: 16px;
-  box-shadow: 0 0 10px 10px rgba(26, 87, 230, 0.25);
+  box-shadow: 0 0 10px 10px #1a57e640;
   background-color: rgba(104, 147, 247, 0.25);
 }
 

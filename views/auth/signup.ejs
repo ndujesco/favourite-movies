@@ -10,6 +10,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Finlandica&display=swap" rel="stylesheet">
 
   <!-- template I used -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
+
   <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/sign-in/">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
@@ -111,13 +113,20 @@
           </div>
 
           <div class="form-floating">
-            <input type="text"
+            <input type="password"
               class="form-control password <%= validationErrors.find(e => e.param === 'password') ? 'invalid' : ''  %>"
               id="floatingLast" placeholder="****" name="password" value="<%= oldInput.password %>">
             <label for="floatingLast">Password</label>
+
+            <div style="position: relative;">
+              <input type="checkbox" onclick="toggleVisibility()"><span style="font-size: 1.2rem;"> Show Password</span>
+            </div>
+
           </div>
           <button class="w-100 btn btn-lg" type="submit">Sign up</button>
-          <a href="/auth/login"> <p>Login instead?</p> </a>
+          <a href="/auth/login">
+            <p>Login instead?</p>
+          </a>
 
     </form>
   </main>
@@ -125,5 +134,15 @@
 
 
 </body>
+<script>
+  function toggleVisibility() {
+    var x = document.getElementById("floatingLast");
+    if (x.type === "password") {
+      x.type = "text";
+    } else {
+      x.type = "password";
+    }
+  }
+</script>
 
 </html>
