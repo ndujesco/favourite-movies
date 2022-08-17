@@ -134,7 +134,7 @@ exports.getRandomMovies = async (req, res) => {
   let filteredUsers;
   try {
     const users = await User.find();
-    filteredUsers = users.filter((user) => user.movies.length > 0);
+    filteredUsers = await users.filter((user) => user.movies.length > 0);
     if (req.user) {
       filteredUsers = users.filter((user) => user.id !== req.user.id);
     }
