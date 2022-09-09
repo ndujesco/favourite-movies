@@ -64,7 +64,7 @@ app.use(crudRoutes);
 app.use("/auth", authRoutes);
 
 app.use((req, res) => {
-  const url = req.url;
+  const url = decodeURI(req.url);
   res.render("404", { url });
 });
 
