@@ -1,7 +1,7 @@
 {
   "name": "movie-project",
   "version": "1.0.0",
-  "description": "",
+  "description": "Here, you get movie recommendations by viewing user's all time favourite movies. You can also contribute by creating your own list.",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
