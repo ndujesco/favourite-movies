@@ -1,7 +1,7 @@
 const axios = require("axios");
 
 const MOVIE_URL = "https://api.themoviedb.org/3/search/movie";
-const SPECIFIC_URL = "https://api.themoviedb.org/3/movie";
+const SPECIFIC_URL = "https://api.themoviedb.org/3/movie/";
 const BACKGROUND_IMAGE =
   "https://www.shortlist.com/media/images/2019/05/the-30-coolest-alternative-movie-posters-ever-2-1556670563-K61a-column-width-inline.jpg";
 
@@ -46,10 +46,9 @@ exports.getDetailsApi = async (id) => {
 
 // (async function (movie) {
 //     try {
-//     console.log(process.env.API_KEY);
-
+    
 //       const params = {
-//         api_key: process.env.API_KEY,
+//         api_key: "4af8cd32e00afd6870e4087b2e2b0d16",
 //         query: movie,
 //         language: "en-US",
 //         include_adult: true,
@@ -63,3 +62,4 @@ exports.getDetailsApi = async (id) => {
 //     }
 // })("Avengers")
   
+
