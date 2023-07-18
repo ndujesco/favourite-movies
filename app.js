@@ -38,6 +38,8 @@ app.use(
   })
 );
 
+
+
 app.use((req, res, next) => {
   res.locals.isAuthenticated = req.session.isAuthenticated;
   next();
@@ -71,6 +73,7 @@ app.use((req, res) => {
 main()
   .then((connection) => {
     app.listen(process.env.PORT || 8080);
+
     console.log("E deh rush!");
 
   })

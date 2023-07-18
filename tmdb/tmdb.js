@@ -1,26 +1,26 @@
 const axios = require("axios");
 
-const MOVIE_URL = "https://api.themoviedb.org/3/search/movie/";
-const apiKey = "4af8cd32e00afd6870e4087b2e2b0d16";
-const SPECIFIC_URL = "https://api.themoviedb.org/3/movie/";
+const MOVIE_URL = "https://api.themoviedb.org/3/search/movie";
+const SPECIFIC_URL = "https://api.themoviedb.org/3/movie";
 const BACKGROUND_IMAGE =
   "https://www.shortlist.com/media/images/2019/05/the-30-coolest-alternative-movie-posters-ever-2-1556670563-K61a-column-width-inline.jpg";
 
-const searchMovieApi = async (movie) => {
+exports.searchMovieApi = async (movie) => {
   try {
     const params = {
-      api_key: apiKey,
+      api_key: process.env.API_KEY,
       query: movie,
       language: "en-US",
       include_adult: true,
     };
-    const response = await axios.get(MOVIE_URL, { params },);
+    const response = await axios.get(MOVIE_URL, { params });
     const movies = response.data.results;
     return movies;
   } catch (err) {
     console.log(err);
   }
 };
+
 exports.getDetailsApi = async (id) => {
   const params = { api_key: apiKey, language: "en-US" };
   try {
@@ -41,8 +41,25 @@ exports.getDetailsApi = async (id) => {
   }
 };
 
-async function callOne(movie) {
-  const res = await searchMovieApi(movie);
-}
 
-callOne("Avengers")
+
+
+// (async function (movie) {
+//     try {
+//     console.log(process.env.API_KEY);
+
+//       const params = {
+//         api_key: process.env.API_KEY,
+//         query: movie,
+//         language: "en-US",
+//         include_adult: true,
+//       };
+//       const response = await axios.get(MOVIE_URL, { params });
+//       const movies = response.data.results;
+//       console.log(movies);
+//       return movies;
+//     } catch (err) {
+//       console.log(err);
+//     }
+// })("Avengers")
+  
