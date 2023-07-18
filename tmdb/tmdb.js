@@ -22,7 +22,7 @@ exports.searchMovieApi = async (movie) => {
 };
 
 exports.getDetailsApi = async (id) => {
-  const params = { api_key: apiKey, language: "en-US" };
+  const params = { api_key: process.env.API_KEY, language: "en-US" };
   try {
     const response = await axios.get(SPECIFIC_URL + id, { params });
     const movie = response.data;
