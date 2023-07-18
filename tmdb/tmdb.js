@@ -14,7 +14,7 @@ const searchMovieApi = async (movie) => {
       language: "en-US",
       include_adult: true,
     };
-    const response = await axios.get(MOVIE_URL, { params });
+    const response = await axios.get(MOVIE_URL, { params },);
     const movies = response.data.results;
     return movies;
   } catch (err) {
